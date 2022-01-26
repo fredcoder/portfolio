@@ -311,3 +311,106 @@ nav#menu-min-options {
     transform: rotate(-45deg);
   }
 }
+
+/* Home */
+
+section#home {
+  height: 110vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+section#home #wrapper {
+  position: absolute;
+  /* z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 80%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 90vh;
+  margin: 10%;
+}
+
+section#home #wrapper h1 {
+  margin-bottom: 30px;
+  font-size: 48px;
+  text-align: left;
+}
+
+section#home #wrapper #description {
+  font-family: 'Montserrat-Light';
+  font-size: xx-large;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  /*line-height: 28px;*/
+  text-align: justify;
+}
+
+section#home #wrapper #description a {
+  font-family: 'Montserrat-Bold';
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+section#home #water-mark img {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  z-index: 0;
+  filter: opacity(0.1);
+}
+
+section#home #spinners {
+  position: absolute;
+  z-index: 0;
+  width: 50%;
+  height: 100%;
+  bottom: 0;
+  top: 65%;
+  left: 45%;
+  margin-right: 0;
+  margin-left: 0;
+  overflow: hidden;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+section#home #spinners img {
+  position: absolute;
+  animation: spin 60s infinite;
+}
+
+@media only screen and (max-width: 600px) {
+  section#home #wrapper h1 {
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  section#home #wrapper #description {
+    font-size: x-large;
+  }
+
+  section#home #water-mark img {
+    position: fixed;
+    top: 10%;
+    left: -20%;
+  }
+
+  section#home #spinners {
+    width: 75%;
+    top: 80%;
+    left: 20%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
