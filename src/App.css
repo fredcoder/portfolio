@@ -12,9 +12,8 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* DISABLE OVER SCROLL */
@@ -31,8 +30,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 :root {
@@ -51,22 +49,22 @@ code {
 
 @font-face {
   font-family: Montserrat-Light;
-  src: url('./assets/fonts/Montserrat-Light.ttf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Light.ttf') format('trueType');
 }
 
 @font-face {
   font-family: Montserrat-Medium;
-  src: url('./assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Medium.ttf') format('trueType');
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url('./assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Bold.ttf') format('trueType');
 }
 
 @font-face {
   font-family: WebSymbols-Regular;
-  src: url('./assets/fonts/WebSymbols-Regular.otf') format('opentype');
+  src: url('./assets/fonts/WebSymbols-Regular.otf') format('openType');
 }
 
 /* Navbar */
@@ -154,11 +152,6 @@ header #wrapper #menu-max ul li a {
   width: 100%;
   height: 100%;
   line-height: 50px;
-}
-
-header #wrapper #menu-max ul li:hover {
-  /* background: var(--first-color); */
-  /* box-shadow: 0px 0px 4px #0000008f; */
 }
 
 header #wrapper #menu-max ul li:hover a {
