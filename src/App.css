@@ -1,45 +1,76 @@
+* {
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* DISABLE OVER SCROLL */
+  overscroll-behavior-y: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* DISABLE OVER SCROLL */
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+  /* DISABLE HIGHLIGHTING */
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  user-select: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --first-color: #2a2a2a;
+  --second-color: #19a9e5;
+  --third-color: #ffd42d;
+  --fourth-color: #000000;
+  --fifth-color: #ffffff;
+  --sixth-color: #999999;
+}
+
 .App {
-  text-align: center;
+  margin: 0 auto;
+  width: 1200px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Montserrat-Light;
+  src: url('./assets/fonts/Montserrat-Light.ttf') format('truetype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url('./assets/fonts/Montserrat-Medium.ttf') format('truetype');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('./assets/fonts/Montserrat-Bold.ttf') format('truetype');
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: WebSymbols-Regular;
+  src: url('./assets/fonts/WebSymbols-Regular.otf') format('opentype');
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 
 /* Navbar */
+
 body {
   font-family: 'Montserrat-Light';
 }
@@ -55,9 +86,11 @@ header {
 }
 
 header #wrapper {
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--fifth-color);
 }
 
 header #wrapper #logo {
@@ -69,29 +102,31 @@ header #wrapper #logo img {
 }
 
 header #wrapper #title {
-  float: left;
-  width: 38%;
-  margin-top: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 header #wrapper #title img {
+  margin: 0 10px;
   width: 32px;
 }
 
-header #wrapper #title a {
+header #wrapper #title p {
   vertical-align: 6px;
   text-decoration: none;
   font-family: 'Montserrat-Medium';
   font-size: larger;
   color: var(--first-color);
-  margin-left: 10px;
 }
 
 header #wrapper #menu-max {
   padding-right: 30px;
-  margin: 0 auto;
-  float: right;
-  width: 55%;
+  /* margin: 0 auto; */
+  /* float: right; */
+  /* width: 55%; */
   height: 100%;
   /* margin-top: 14px; */
   text-align: right;
@@ -109,7 +144,6 @@ header #wrapper #menu-max ul li {
   font-family: 'Montserrat-Medium';
   font-size: larger;
   cursor: pointer;
-  transform: skewX(-10deg);
 }
 
 header #wrapper #menu-max ul li a {
@@ -120,7 +154,6 @@ header #wrapper #menu-max ul li a {
   width: 100%;
   height: 100%;
   line-height: 50px;
-  transform: skewX(10deg);
 }
 
 header #wrapper #menu-max ul li:hover {
@@ -151,7 +184,7 @@ nav#menu-min-options {
   box-shadow: 0 0 5px black;
 }
 
-#hidder {
+#hidden {
   position: absolute;
   width: 100%;
   height: 8px;
@@ -170,127 +203,118 @@ nav#menu-min-options {
   transition: 0.4s;
 }
 
-#hamburguer-menu {
+#hamburger-menu {
   display: none;
 }
 
 @media only screen and (max-width: 800px) {
   header #wrapper {
-      width: 100%;
-      margin: 0 auto;
+    width: 100%;
   }
   header #wrapper #logo {
-      display: block;
-      float: left;
-      width: 15%;
-      margin-top: 12px;
-      text-align: right;
+    display: flex;
+    padding: 10px;
   }
   header #wrapper #title {
-      float: left;
-      width: 70%;
-      margin: 0 auto;
-      margin-top: 12px;
-      text-align: center;
+    text-align: center;
   }
   header #wrapper #title img {
-      display: none;
+    display: none;
   }
   header #wrapper #menu-max {
-      display: none;
+    display: none;
   }
   header #wrapper #menu-min {
-      display: block;
-      float: left;
-      width: 15%;
+    display: block;
   }
   header #wrapper #menu-min .MuiSvgIcon-root {
-      margin-top: 8px;
-      width: 80%;
-      height: 33px;
+    margin-top: 8px;
+    width: 80%;
+    height: 33px;
   }
   nav#menu-min-options ul li {
-      height: 30px;
-      /* width: 76%; */
-      background: var(--fifth-color);
-      font-family: 'Montserrat-Medium';
-      color: var(--fourth-color);
-      /* text-shadow: 0px 0px 0.7px #333; */
-      text-align: center;
-      padding-top: 8px;
-      margin: 0 auto;
-      /* margin-bottom: 1px; */
-      list-style: none;
-      /* border-top: 1px solid;*/
+    height: 30px;
+    /* width: 76%; */
+    background: var(--fifth-color);
+    font-family: 'Montserrat-Medium';
+    color: var(--fourth-color);
+    /* text-shadow: 0px 0px 0.7px #333; */
+    text-align: center;
+    padding-top: 8px;
+    margin: 0 auto;
+    /* margin-bottom: 1px; */
+    list-style: none;
+    /* border-top: 1px solid;*/
   }
   nav#menu-min-options ul li a {
-      text-decoration: none;
-      color: black;
-      margin: 0px;
-      display: block;
-      width: 100%;
-      height: 100%;
+    text-decoration: none;
+    color: black;
+    margin: 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   nav#menu-min-options ul li:first-child {
-      border-top: 1px solid #bbb;
+    border-top: 1px solid #bbb;
   }
   nav#menu-min-options {
-      clear: both;
-      float: left;
-      width: 100%;
-      box-shadow: 0px 1px 10px rgb(0 0 0 / 45%);
-      background: var(--fifth-color);
-      position: fixed;
-      z-index: 2;
-      top: 0;
+    clear: both;
+    float: left;
+    width: 100%;
+    box-shadow: 0px 1px 10px rgb(0 0 0 / 45%);
+    background: var(--fifth-color);
+    position: fixed;
+    z-index: 2;
+    top: 0;
   }
 
-  #hamburguer-menu {
-      display: block;
-      float: left;
-      width: 24px;
-      height: 18px;
-      margin: 15px 5px;
-      position: relative;
-      cursor: pointer;
+  #hamburger-menu {
+    display: flex;
+    width: 24px;
+    height: 18px;
+    margin: 15px 15px;
+    position: relative;
+    cursor: pointer;
   }
-  
-  #hamburguer-menu span {
-      position: absolute;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      opacity: 1;
-      background-color: #000000;
-      border-radius: 2px;
-      pointer-events: none;
-      transform: rotate(0deg);
-      transition: .2s ease;
+
+  #hamburger-menu span {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 1;
+    background-color: #000000;
+    border-radius: 2px;
+    pointer-events: none;
+    transform: rotate(0deg);
+    transition: 0.2s ease;
   }
-  
-  #hamburguer-menu span:nth-child(1) {
-      top: 0px;
+
+  #hamburger-menu span:nth-child(1) {
+    top: 0px;
   }
-  
-  #hamburguer-menu span:nth-child(2), #hamburguer-menu span:nth-child(3) {
-      top: 50%;
+
+  #hamburger-menu span:nth-child(2),
+  #hamburger-menu span:nth-child(3) {
+    top: 50%;
   }
-  
-  #hamburguer-menu span:nth-child(4) {
-      top: 100%;
+
+  #hamburger-menu span:nth-child(4) {
+    top: 100%;
   }
-  
-  #hamburguer-menu.open span:nth-child(1), #hamburguer-menu.open span:nth-child(4) {
-      top: 50%;
-      width: 0%;
-      left: 50%;
+
+  #hamburger-menu.open span:nth-child(1),
+  #hamburger-menu.open span:nth-child(4) {
+    top: 50%;
+    width: 0%;
+    left: 50%;
   }
-  
-  #hamburguer-menu.open span:nth-child(2) {
-      transform: rotate(45deg);
+
+  #hamburger-menu.open span:nth-child(2) {
+    transform: rotate(45deg);
   }
-  
-  #hamburguer-menu.open span:nth-child(3) {
-      transform: rotate(-45deg);
+
+  #hamburger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
   }
 }
