@@ -12,8 +12,9 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* DISABLE OVER SCROLL */
@@ -30,7 +31,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 :root {
@@ -412,5 +414,120 @@ section#home #spinners img {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* About */
+
+section#aboutMe {
+  height: 100%;
+}
+
+section#aboutMe::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  -webkit-transform: skewY(-10deg);
+  transform: skewY(-10deg);
+  background-color: var(--first-color);
+  box-shadow: 0px 0px 10px #0000008f;
+}
+
+section#aboutMe #wrapper {
+  color: #fff;
+  padding: 100px 10% 200px 10%;
+}
+
+section#aboutMe #wrapper h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+section#aboutMe #wrapper hr {
+  color: var(--third-color);
+  border: 1px solid;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+section#aboutMe img {
+  width: 20%;
+  display: block;
+  margin: 0 auto 50px;
+  border-radius: 50%;
+}
+
+section#aboutMe #description {
+  text-align: justify;
+  font-family: 'Montserrat-Light';
+  font-size: x-large;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  line-height: 36px;
+}
+
+section#aboutMe #wrapper h2 {
+  font-size: xx-large;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+section#aboutMe #wrapper #skills {
+  line-height: 42px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
+}
+
+section#aboutMe #wrapper #skills span {
+  /* float: left;*/
+  /* width: 33.33%; */
+  font-size: x-large;
+}
+
+section#aboutMe #wrapper #skills span svg {
+  color: var(--third-color);
+  width: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  section#aboutMe #wrapper {
+    padding: 100px 10%;
+  }
+  section#aboutMe img {
+    width: 35%;
+  }
+  section#aboutMe #wrapper h1 {
+    font-size: xx-large;
+  }
+  section#aboutMe #wrapper h2 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  section#aboutMe #wrapper hr {
+    width: 100%;
+  }
+  section#aboutMe #description {
+    font-size: large;
+    line-height: 28px;
+  }
+  section#aboutMe #wrapper #skills {
+    line-height: 30px;
+    height: 100%;
+  }
+  section#aboutMe #wrapper #skills span {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  section#aboutMe #wrapper #skills span {
+    font-size: larger;
   }
 }
