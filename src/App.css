@@ -324,17 +324,17 @@ section#home {
 
 section#home #wrapper {
   position: absolute;
-  /* z-index: 1;
+  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 80%; */
-  display: flex;
+  min-width: 80%;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   height: 90vh;
-  margin: 10%;
+  margin: 10%; */
 }
 
 section#home #wrapper h1 {
@@ -529,5 +529,223 @@ section#aboutMe #wrapper #skills span svg {
 @media only screen and (max-width: 1200px) {
   section#aboutMe #wrapper #skills span {
     font-size: larger;
+  }
+}
+
+/* Projects */
+
+section#projects {
+  min-height: 180vh;
+  overflow: hidden;
+}
+
+section#projects::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  -webkit-transform: skewY(-10deg);
+  transform: skewY(-10deg);
+}
+
+section#projects #wrapper {
+  color: black;
+  padding: 100px 12% 180px 12%;
+  /* margin-bottom: 300px; */
+}
+
+section#projects #wrapper h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+section#projects #wrapper hr {
+  background-color: var(--third-color);
+  border: 1px solid var(--third-color);
+  color: var(--third-color);
+  margin: 0 auto;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+section#projects #wrapper h2 {
+  font-size: 36px;
+  text-align: center;
+  margin: 5% 0;
+}
+
+section#projects #wrapper #flex-box {
+  display: flex;
+  align-items: center;
+}
+
+section#projects #wrapper #flex-box-reverse {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+}
+
+.project-top {
+  float: left;
+  width: 48%;
+  margin: 0 2% 0 0%;
+}
+
+.project-top img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.project-bottom {
+  float: left;
+  width: 48%;
+  margin: 0 0% 0 2%;
+  overflow: hidden;
+  margin-bottom: 3%;
+}
+
+.project-bottom .description {
+  text-align: justify;
+  font-size: x-large;
+  margin-bottom: 12px;
+  line-height: 32px;
+}
+
+.project-bottom .technologies {
+  text-align: left;
+  font-size: x-large;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.project-bottom .button-box .large-button-box {
+  padding: 30px;
+}
+
+.project-bottom .link {
+  font-family: Montserrat-Medium;
+  font-size: larger;
+  color: var(--fourth-color);
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  display: block;
+  background-color: var(--third-color);
+  height: 40px;
+  width: 50%;
+  line-height: 200%;
+}
+
+.project-bottom .link:hover {
+  background: black;
+  color: white;
+}
+
+.project-bottom .technologies span {
+  margin-left: 5px;
+  vertical-align: text-top;
+}
+
+.project-bottom .technologies svg {
+  margin: 0 0px 0 7px;
+  font-size: x-large;
+  color: var(--second-color);
+}
+
+section#projects #wrapper .separator-line {
+  border: 0px;
+}
+
+.project-top-inverse {
+  float: right;
+  width: 48%;
+  margin: 0 0% 0 2%;
+  overflow: hidden;
+  margin-bottom: 3%;
+}
+
+.project-bottom-inverse {
+  float: right;
+  width: 48%;
+  margin: 0 2% 0 0%;
+}
+
+@media only screen and (max-width: 1800px) {
+  .project-bottom .description,
+  .project-bottom .technologies {
+    font-size: larger;
+  }
+  section#projects #wrapper {
+    margin-bottom: 160px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  section#projects {
+    min-height: 230vh;
+    overflow: hidden;
+  }
+  section#projects #wrapper {
+    padding: 20% 10% 0% 10%;
+  }
+  section#projects #wrapper h1 {
+    font-size: xx-large;
+  }
+  section#projects #wrapper hr {
+    width: 100%;
+  }
+  section#projects #wrapper h2 {
+    font-size: 28px;
+    font-weight: bolder;
+  }
+  section#projects #wrapper #flex-box {
+    display: block;
+  }
+  section#projects #wrapper #flex-box-reverse {
+    display: block;
+  }
+  section#projects #wrapper .separator-line {
+    background-color: var(--sixth-color);
+    border: 1px solid var(--sixth-color);
+    margin: 0 auto;
+    margin-bottom: 15%;
+    width: 100%;
+  }
+  .project-top {
+    width: 100%;
+  }
+  .project-top img {
+    width: 100%;
+  }
+  .project-bottom {
+    width: 100%;
+  }
+  .project-bottom .description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .project-bottom .technologies {
+    text-align: center;
+  }
+  .project-bottom .description,
+  .project-bottom .technologies {
+    font-size: large;
+  }
+  .project-bottom .description,
+  .project-bottom .technologies span {
+    padding-top: 6px;
+    display: block;
+  }
+  .project-bottom .button-box .large-button-box {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .project-bottom .link {
+    margin: 0 auto;
   }
 }
