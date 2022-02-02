@@ -577,21 +577,20 @@ section#projects #wrapper h2 {
   margin: 5% 0;
 }
 
-section#projects #wrapper #flex-box {
+section#projects #wrapper .flex-box {
   display: flex;
   align-items: center;
 }
 
-section#projects #wrapper #flex-box-reverse {
+section#projects #wrapper .flex-box-reverse {
   display: flex;
   flex-flow: row-reverse;
   align-items: center;
 }
 
 .project-top {
-  float: left;
   width: 48%;
-  margin: 0 2% 0 0%;
+  /* margin: 0 2% 0 0%; */
 }
 
 .project-top img {
@@ -602,9 +601,8 @@ section#projects #wrapper #flex-box-reverse {
 }
 
 .project-bottom {
-  float: left;
   width: 48%;
-  margin: 0 0% 0 2%;
+  /* margin: 0 0% 0 2%; */
   overflow: hidden;
   margin-bottom: 3%;
 }
@@ -662,17 +660,15 @@ section#projects #wrapper .separator-line {
 }
 
 .project-top-inverse {
-  float: right;
   width: 48%;
-  margin: 0 0% 0 2%;
+  /* margin: 0 0% 0 2%; */
   overflow: hidden;
-  margin-bottom: 3%;
+  /* margin-bottom: 3%; */
 }
 
 .project-bottom-inverse {
-  float: right;
   width: 48%;
-  margin: 0 2% 0 0%;
+  /* margin: 0 2% 0 0%; */
 }
 
 @media only screen and (max-width: 1800px) {
@@ -703,10 +699,10 @@ section#projects #wrapper .separator-line {
     font-size: 28px;
     font-weight: bolder;
   }
-  section#projects #wrapper #flex-box {
+  section#projects #wrapper .flex-box {
     display: block;
   }
-  section#projects #wrapper #flex-box-reverse {
+  section#projects #wrapper .flex-box-reverse {
     display: block;
   }
   section#projects #wrapper .separator-line {

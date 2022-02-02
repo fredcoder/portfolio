@@ -69,7 +69,9 @@ function Projects() {
           <hr />
           {projects.map((project, idx) => (
             <Fragment key={project.title}>
-              <div id="flex-box">
+              <div
+                className={`${idx % 2 === 0 ? 'flex-box' : 'flex-box-reverse'}`}
+              >
                 <div
                   className={`project-top ${
                     idx % 2 === 0 ? 'project-top-inverse' : ''
@@ -94,9 +96,11 @@ function Projects() {
                       ))}
                     </span>
                   </p>
-                  <div className="button-box">
-                    <LargeButton url={project.url} />
-                  </div>
+                  {project.url && (
+                    <div className="button-box">
+                      <LargeButton url={project.url} />
+                    </div>
+                  )}
                 </div>
               </div>
               <hr className="separator-line" />
