@@ -24,7 +24,7 @@ function Navbar() {
           </div>
           <div id="title">
             <Logo />
-            <p>Freddy | Developer</p>
+            <a href="#home">Freddy | Developer</a>
           </div>
           <nav id="menu-max">
             <ul>

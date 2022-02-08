@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import Footer from './components/molecules/Footer'
 import Navbar from './components/molecules/Navbar'
 import About from './components/organisms/About'
 import Contact from './components/organisms/Contact'
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </>
   )
 }

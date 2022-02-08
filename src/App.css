@@ -89,7 +89,8 @@ header #wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   background-color: var(--fifth-color);
 }
 
@@ -114,7 +115,7 @@ header #wrapper #title img {
   width: 32px;
 }
 
-header #wrapper #title p {
+header #wrapper #title a {
   vertical-align: 6px;
   text-decoration: none;
   font-family: 'Montserrat-Medium';
@@ -208,7 +209,7 @@ nav#menu-min-options {
   }
   header #wrapper #logo {
     display: flex;
-    padding: 10px;
+    padding: 13px;
   }
   header #wrapper #title {
     text-align: center;
@@ -552,7 +553,7 @@ section#projects::before {
 
 section#projects #wrapper {
   color: black;
-  padding: 100px 12% 180px 12%;
+  padding: 100px 10% 180px 10%;
   /* margin-bottom: 300px; */
 }
 
@@ -579,12 +580,15 @@ section#projects #wrapper h2 {
 
 section#projects #wrapper .flex-box {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 section#projects #wrapper .flex-box-reverse {
   display: flex;
   flex-flow: row-reverse;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -677,7 +681,7 @@ section#projects #wrapper .separator-line {
     font-size: larger;
   }
   section#projects #wrapper {
-    margin-bottom: 160px;
+    margin-bottom: 60px;
   }
 }
 
@@ -973,5 +977,52 @@ section#contact #wrapper form label {
     display: block;
     margin: 5% 2%;
     font-size: medium;
+  }
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  line-height: 300%;
+  text-align: center;
+  width: 100%;
+  background: var(--fourth-color);
+  box-shadow: 0 0 5px var(--fourth-color);
+}
+
+footer #description {
+  text-align: center;
+}
+
+footer #description span {
+  margin: 0 auto;
+  margin: 40px 1%;
+  text-align: center;
+  display: inline-block;
+  width: 25%;
+}
+
+footer #description span svg {
+  font-size: 48px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+}
+
+footer #description span svg:hover {
+  color: var(--second-color);
+}
+
+footer #copy {
+  border-top: 1px solid var(--first-color);
+  font-family: 'Montserrat-Medium';
+  font-size: larger;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  footer #description span svg {
+    font-size: xx-large;
   }
 }

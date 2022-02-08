@@ -103,7 +103,7 @@ function Projects() {
                   )}
                 </div>
               </div>
-              <hr className="separator-line" />
+              {projects.length - 1 !== idx && <hr className="separator-line" />}
             </Fragment>
           ))}
         </section>
