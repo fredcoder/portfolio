@@ -467,7 +467,7 @@ section#aboutMe #description {
   text-align: justify;
   font-family: 'Montserrat-Light';
   font-size: x-large;
-  letter-spacing: 0px;
+  letter-spacing: 0.8px;
   word-spacing: 0px;
   line-height: 36px;
 }
