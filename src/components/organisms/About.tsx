@@ -9,6 +9,8 @@ import {
   faCss3Alt,
   faReact,
   faMicrosoft,
+  faDocker,
+  faNpm,
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faDatabase,
@@ -18,16 +20,21 @@ import {
   faProjectDiagram,
   faCodeBranch,
 } from '@fortawesome/free-solid-svg-icons'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 function About() {
+  const experience = new Date().getFullYear() - 2013
   const skillItems = [
     { icon: faHtml5, title: 'HTML 5' },
     { icon: faCss3Alt, title: 'CSS 3' },
-    { icon: faJs, title: 'Javascript' },
+    { icon: faJs, title: 'JavaScript' },
+    { icon: faJs, title: 'TypeScript' },
+    { icon: faDocker, title: 'Docker' },
     { icon: faReact, title: 'React JS' },
     { icon: faReact, title: 'React Native' },
+    { icon: faNpm, title: 'NPM Packages' },
     { icon: faDatabase, title: 'SQL' },
-    { icon: faMicrosoft, title: 'NET' },
+    { icon: faMicrosoft, title: '.NET' },
     { icon: faGlobe, title: 'WebAPI' },
     { icon: faRocket, title: 'Azure DevOps' },
     { icon: faCodeBranch, title: 'GIT' },
@@ -50,20 +57,18 @@ function About() {
           <hr />
           <div data-aos="fade-up">
             <p id="description">
-              I am a Systems Engineer and Full Stack Developer with over 6+
-              years of experience in software engineering and web development.
-              Throughout my career I have worked for various technology
-              companies, where I have managed to develop various web
-              applications and features by using the best programming practices
-              such as design patterns, standardized source code and
-              human-readable technical documentation.
+              I am a Systems Engineer by profession with over {experience} years
+              of experience working mainly as a Full-Stack Developer for
+              multiple companies in the services and technology sector. I have
+              had the opportunity to contribute to various projects designing
+              and developing Databases, Services, Web APIs, and Web and Mobile
+              applications applying the best programming practices such as SOLID
+              principles and design patterns.
               <br />
               <br />
-              Currently I am located in the city of Melbourne working for a
-              software company where in addition to applying my knowledge in
-              frontend and backend development, I am also venturing into the
-              development of multiplatform mobile applications through the use
-              of React Native.
+              In recent years, my work has been mostly focused on web and mobile
+              development using ReactJS and React Native respectively where I
+              have consolidated great expertise.
               <br />
               <br />
               Whether you are interested in my work to be part of a development
@@ -79,7 +84,7 @@ function About() {
           <div id="skills" data-aos="fade-up">
             {skillItems.map((item) => (
               <span key={item.title}>
-                <FontAwesomeIcon icon={item.icon} /> {item.title}
+                <FontAwesomeIcon icon={item.icon as IconProp} /> {item.title}
               </span>
             ))}
           </div>

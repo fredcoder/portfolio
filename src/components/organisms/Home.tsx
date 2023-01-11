@@ -8,9 +8,11 @@ function Home() {
       <section id="wrapper">
         <h1 id="title">Hi! I'm Freddy</h1>
         <p id="description">
-          I am a Melbourne based system engineer and web developer.
+          I am a Melbourne based system engineer and full-stack developer.
           <br />
-          I create custom websites to help business do better online.
+          <br />
+          I create custom websites and mobile apps to help business do better
+          online.
           <br />
           <br />
           Take a look at some of my work below and{' '}

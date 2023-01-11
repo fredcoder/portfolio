@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 function Contact() {
   // submitForm = this.submitForm.bind(this);
@@ -112,7 +113,7 @@ function Contact() {
                     window.open(`mailto:freddy.clavijo@gmail.com`)
                   }}
                 >
-                  <FontAwesomeIcon icon={faPaperPlane} />{' '}
+                  <FontAwesomeIcon icon={faPaperPlane as IconProp} />{' '}
                   freddy.clavijo@gmail.com
                 </span>
               </div>
@@ -122,7 +123,8 @@ function Contact() {
                     document.location.href = `tel:+61 0416 844 858`
                   }}
                 >
-                  <FontAwesomeIcon icon={faMobileAlt} /> +61 0416 844 858
+                  <FontAwesomeIcon icon={faMobileAlt as IconProp} />{' '}
+                  {`+61 0416 844 858`}
                 </span>
               </div>
               <div>
@@ -133,8 +135,8 @@ function Contact() {
                     )
                   }}
                 >
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Melbourne, VIC,
-                  Australia
+                  <FontAwesomeIcon icon={faMapMarkerAlt as IconProp} />{' '}
+                  Melbourne, VIC, Australia
                 </span>
               </div>
             </div>

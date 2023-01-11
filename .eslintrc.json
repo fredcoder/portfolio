@@ -59,7 +59,10 @@
           "**/*.test.jsx",
           "**/*.test.ts",
           "**/*.test.tsx",
-          "src/tests/**/*"
+          "src/tests/**/*",
+          "**/*.stories.*",
+          "**/.storybook/**/*.*",
+          "**/*.prop-types/**"
         ]
       }
     ],

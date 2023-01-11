@@ -14,6 +14,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import LargeButton from '../atoms/LargeButton'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 function Projects() {
   useEffect(() => {
@@ -92,7 +93,7 @@ function Projects() {
                     Developed with
                     <span>
                       {project.techs.map((tech, index) => (
-                        <FontAwesomeIcon key={index} icon={tech} />
+                        <FontAwesomeIcon key={index} icon={tech as IconProp} />
                       ))}
                     </span>
                   </p>
